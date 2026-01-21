@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-group-2
+  annotations:
+    secondary-scheduler/podgroup-name: pod-group
+    secondary-scheduler/podgroup-size: "2"
+spec:
+  schedulerName: secondary-scheduler
+  containers:
+  - name: pause
+    image: k8s.gcr.io/pause:3.5
